@@ -2,6 +2,7 @@
 $data_drive = "sn30-pe-data"
 
 # Check Vaildate Directory
+$pe_data = Get-Volume -FileSystemLabel $data_drive
 Write-Output "=====sn30 PE [Driver Backup Tool]====="
 if ($null -eq $pe_data) {
     Write-Output "$($data_drive) is not available."
