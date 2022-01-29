@@ -7,16 +7,18 @@ Windows PE환경에서 사용하기 위해 직접 만든 Powershell 스크립트
 * sn30pe-init.ps1: Windows이미지를 설치하기 위한 스크립트 입니다.
 
 ## 목차
-* [sn30pe-init](#sn30pe-init)
-    * [주의사항](#주의사항)
-    * [알려진 문제](#알려진-문제)
-    * [준비사항](#준비사항)
-        * [데이터 파티션 내에 폴더](#데이터-파티션-내에-폴더)
-            * [drivers](#drivers)
-            * [images](#images)
-        * [PE의 시작 스크립트에 추가하기](#PE의-시작-스크립트에-추가하기)
-    * [실행해보기](#실행해보기)
-* [sn30pe-backup](#sn30pe-backup)
+- [sn30-pe-scripts](#sn30-pe-scripts)
+  - [목차](#목차)
+- [sn30pe-init](#sn30pe-init)
+  - [주의사항](#주의사항)
+  - [알려진 문제](#알려진-문제)
+  - [준비사항](#준비사항)
+    - [데이터 파티션 내에 폴더](#데이터-파티션-내에-폴더)
+      - [drivers](#drivers)
+      - [images](#images)
+    - [PE의 시작 스크립트에 추가하기](#pe의-시작-스크립트에-추가하기)
+  - [실행해보기](#실행해보기)
+- [sn30pe-backup](#sn30pe-backup)
 
 ---
 
@@ -30,11 +32,7 @@ PE가 부팅하고 기본으로 실행되는 스크립트 파일입니다. 이 �
 * PE의 시작 스크립트에 등록하려면 PE에 `powershell` 구성요소가 추가 되어야 합니다.
     * 추가 방법: [MS 설명서링크](https://docs.microsoft.com/ko-kr/windows-hardware/manufacture/desktop/winpe-adding-powershell-support-to-windows-pe)
 ## 알려진 문제
-현재 해결중인 문제들입니다.
-
-|문제|임시 해결방안|
-|---|---|
-|이미지 파일이나 드라이버 폴더가 하나거나 없는 경우 제대로 동작하지 않는 문제|`images`폴더에 아무 파일이나 만들어서 넣어놓으시면 됩니다. `drivers`폴더에도 빈 폴더 만들어서 넣어놓으면 됩니다.|
+현재 발견된 문제가 없습니다.
 
 ## 준비사항
 ### 데이터 파티션 내에 폴더
