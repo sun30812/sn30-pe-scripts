@@ -1,0 +1,9 @@
+clean
+convert gpt
+cre par efi size=250
+format quick fs=fat32 label=System
+ass letter=S
+cre par msr size=16
+cre par pri
+format quick fs=ntfs label=OS
+ass letter=W
