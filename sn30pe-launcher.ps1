@@ -1,4 +1,5 @@
 $version = "0.1b"
+Add-Type -AssemblyName System.Windows.Forms
 $main = [System.Windows.Forms.Form]::new()
 $main.Size = [System.Drawing.Size]::new(700, 400)
 $main.Text = "앱 런처"
@@ -14,12 +15,12 @@ function appsClick ($object, $eventArg) {
 function systemManage ($object, $eventArg, [bool]$isRestart) {
     if ($isRestart) {
         if ([System.Windows.Forms.MessageBox]::Show("시스템을 다시시작하시겠습니까?", "다시시작", [System.Windows.Forms.MessageBoxButtons]::OKCancel) -eq "OK") {
-            shutdown.exe /r /t 0
+            Restart-Computer
         }
     }
     else {
         if ([System.Windows.Forms.MessageBox]::Show("시스템을 종료하시겠습니까?", "시스템 종료", [System.Windows.Forms.MessageBoxButtons]::OKCancel) -eq "OK") {
-            shutdown.exe /s /t 0
+            Stop-Computer
         } 
     }
 }
