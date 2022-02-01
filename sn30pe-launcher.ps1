@@ -47,7 +47,6 @@ $shutdown.Add_Click({ systemManage })
 $reboot.Text = "다시시작"
 $reboot.Add_Click({ systemManage -isRestart $true })
 $versionInfo.Add_Click({ versionInfoClick })
-$shutdown.Add_Click({ systemManage -isRestart $false })
 $infoMenu.DropDownItems.Add($versionInfo)
 $systemMenu.DropDownItems.AddRange(@($shutdown, $reboot))
 $mainMenu.Items.Add($infoMenu)
