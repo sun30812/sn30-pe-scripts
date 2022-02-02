@@ -16,7 +16,7 @@ function appsClick ([System.Windows.Forms.ListView]$object, $eventArg) {
         "notepad" { notepad.exe }
         "initScript" { 
             $pinfo.FileName = "powershell.exe"
-            $pinfo.Arguments = "-ExecutionPolicy ByPass -c ./sn30pe-init.ps1"
+            $pinfo.Arguments = "-ExecutionPolicy ByPass -c X:\windows\sn30pe-init.ps1"
         }
         Default { $pinfo.FileName = $_ }
     }
@@ -43,7 +43,7 @@ $infoMenu = [System.Windows.Forms.ToolStripMenuItem]::new()
 $systemMenu = [System.Windows.Forms.ToolStripMenuItem]::new()
 $appsView = [System.Windows.Forms.ListView]::new()
 $appsDirectory = [System.IO.DirectoryInfo]::new((Get-Volume -FileSystemLabel $dataDrive).DriveLetter + ":\apps")
-$internalAppsDirectory = [System.IO.DirectoryInfo]::new("%systemroot%\apps")
+$internalAppsDirectory = [System.IO.DirectoryInfo]::new("X:\windows\apps")
 $infoMenu.Text = "정보"
 $systemMenu.Text = "시스템"
 $appsView.MultiSelect = $false
